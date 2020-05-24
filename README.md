@@ -8,3 +8,4 @@ Implement algorithms in JavaScript with detailed description.
 - Clone this repository
 - Run ```npm install```
 - Run ```npm run test```
+- Run tests ```npm t``` or ```npm run test```
