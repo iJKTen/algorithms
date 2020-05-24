@@ -13,14 +13,14 @@ Check, if the value at index 4 is the element we are looking for and if it is th
 this case 4.
 
 If the value at index > 4 then we must assume that the value is present between index 0 and index mid.
-So now the beginIndex will be 0 and endIndex will be mid.
+So now beginIndex will be 0 and endIndex will be mid.
 
 If the value at index < 4 then we must assume that the value is present between index mid and index length
-of the array - 1. So nowthe beginIndex will be mid and endIndex will be length of the array - 1.
+of the array - 1. So now beginIndex will be mid and endIndex will be length of the array - 1.
 
 We will not be splitting the array, we will keep track of where the array starts and where it ends, using two
-variables, beginIndex and endIndex. We will change these two variables by comparing x with the middle element
-of the array.
+variables, beginIndex and endIndex. We will change these two variables by comparing x (value we want to find)
+with the middle element of the array.
 
 If you array has even number of elements then you will get a whole number, otherwise you get a decimal number,
 which is not an index in the array and it won't serve our puropse. You, get a whole number by passing the
