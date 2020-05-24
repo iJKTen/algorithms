@@ -68,10 +68,12 @@ const binarySearch = (array, beginIndex, endIndex, x) => {
 
     if (array[mid] > x) {
       // Makes it a recursive function
+      // Meaning, x is present between beginIndex and mid.
       return binarySearch(array, beginIndex, mid - 1, x);
     }
 
     // Makes it a recursive function
+    // Meaning, x is present between mid and endIndex.
     return binarySearch(array, mid + 1, endIndex, x);
   }
 
