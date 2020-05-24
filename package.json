@@ -4,7 +4,7 @@
   "description": "Implementation of various algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Jai",
   "license": "ISC",
@@ -12,5 +12,19 @@
     "eslint": "^7.1.0",
     "eslint-config-google": "^0.14.0",
     "jest": "^26.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }
