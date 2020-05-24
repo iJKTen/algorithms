@@ -1,4 +1,5 @@
 # Algorithms in JavaScript
+Implement algorithms in JavaScript with code and detailed description.
 
 ## Binary Search
 
