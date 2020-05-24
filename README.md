@@ -7,4 +7,4 @@ Implement algorithms in JavaScript with detailed description.
 ### How to get started
 - Clone this repository
 - Run npm install
-- Run npm run test
+- Run ```npm run test```
