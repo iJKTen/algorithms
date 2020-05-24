@@ -51,10 +51,15 @@ const binarySearch = (array, beginIndex, endIndex, x) => {
   if (endIndex >= 1) {
     /*
       Why add beginIndex below?
-      First time when this function is called endIndex will be length of the array - 1 and beginIndex will be 0, so the mid will b 0 + (endIndex - beginIndex) and since beginIndex is 0 it does not change anything.
-      As long as beginIndex is 0, beginIndex does not come into play and that simply means, the element we are looking for is present between 0 and mid index of the array. Since the array is sorted. 
+      First time when this function is called endIndex will be length of the array - 1 and beginIndex will be
+      0, so the mid will b 0 + (endIndex - beginIndex) and since beginIndex is 0 it does not change anything.
+      As long as beginIndex is 0, beginIndex does not come into play and that simply means, the element we are
+      looking for is present between 0 and mid index of the array. Since the array is sorted.
       Because this is a recursive function, beginIndex and endIndex will have two different values.
-      Let's now assume, beginIndex = 4, endIndex = 8 and if we only had Math.floow((endIndex - beginIndex) / 2) the value mid will be 8 - 4 = 4, 4 / 2 = 2. Now mid = 2. But, you cannot get the value at index 2, when clearly beginIndex starts at 4 and that is why you add beginIndex below, bringind the mid value to 6 which is correct. Now you mid value is between beginIndex and endIndex. 
+      Let's now assume, beginIndex = 4, endIndex = 8 and if we only had Math.floow((endIndex - beginIndex) / 2)
+      the value mid will be 8 - 4 = 4, 4 / 2 = 2. Now mid = 2. But, you cannot get the value at index 2, when
+      clearly beginIndex starts at 4 and that is why you add beginIndex below, bringind the mid value to 6
+      which is correct. Now you mid value is between beginIndex and endIndex.
     */
     const mid = beginIndex + Math.floor((endIndex - beginIndex) / 2);
     if (array[mid] === x) {
