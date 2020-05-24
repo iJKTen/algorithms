@@ -1,5 +1,5 @@
 # Algorithms in JavaScript
-Implement algorithms in JavaScript with code and detailed description.
+Implement algorithms in JavaScript with detailed description.
 
 ## Algorithms
 1. [Binary Search](https://github.com/iJKTen/algorithms/blob/master/docs/binary-search.md)
