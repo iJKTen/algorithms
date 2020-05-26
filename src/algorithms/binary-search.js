@@ -5,7 +5,6 @@ const binarySearch = (array, x) => {
   while (beginIndex <= endIndex) {
     const mid = beginIndex + Math.floor((endIndex - beginIndex) / 2);
     if (array[mid] === x) {
-      console.log('found x', x);
       return mid;
     }
 
