@@ -19,14 +19,14 @@ const insertionSort = (a) => {
   // index represents the logical boundary where left array is sorted & right array is unsorted.
   for (let index = 1; index < a.length; index++) {
     const elementToSwap = a[index];
-    let previousIndex = index - 1;
+    let previousIndex = index;
 
     // Figure out where to place elementToSwap.
-    while (previousIndex >= 0 && a[previousIndex] > elementToSwap) {
-      a[previousIndex + 1] = a[previousIndex];
+    while (previousIndex >= 0 && a[previousIndex - 1] > elementToSwap) {
+      a[previousIndex] = a[previousIndex - 1];
       previousIndex--;
     }
-    a[previousIndex + 1] = elementToSwap;
+    a[previousIndex] = elementToSwap;
   }
 
   return a;
