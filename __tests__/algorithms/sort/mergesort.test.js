@@ -1,4 +1,4 @@
-const {sort} = require('./mergesort');
+const { sort } = require('../../../src/algorithms/sort/mergesort');
 
 const a = [20, 10, 4, 80, 50, 1, 33, 44];
 const b = [20, 10, 4, 80, 50, 1, 33, 44, 77];

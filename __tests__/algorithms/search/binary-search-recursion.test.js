@@ -1,4 +1,4 @@
-const {binarySearch} = require('./binary-search-recursion');
+const { binarySearch } = require('../../../src/algorithms/search/binary-search-recursion');
 
 const a = [2, 4, 6, 8, 10, 12, 14, 16, 18];
 test('Recursive binary search right', () => {

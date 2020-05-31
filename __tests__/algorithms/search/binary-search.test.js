@@ -1,4 +1,4 @@
-const {binarySearch} = require('./binary-search');
+const { binarySearch } = require('../../../src/algorithms/search/binary-search');
 
 const a = [2, 4, 6, 8, 10, 12, 14, 16, 18];
 test('binary search right', () => {

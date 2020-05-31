@@ -1,4 +1,4 @@
-const { quickSort } = require('./quick-sort');
+const { quickSort } = require('../../../src/algorithms/sort/quick-sort');
 
 const a = [20, 10, 4, 80, 50, 1, 33, 44];
 const b = [1, 10, 4, 80, 50, 2, 33, 44, 77];

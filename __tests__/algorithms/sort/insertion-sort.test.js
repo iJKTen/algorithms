@@ -1,4 +1,4 @@
-const {insertionSort} = require('./insertion-sort');
+const { insertionSort } = require('../../../src/algorithms/sort/insertion-sort');
 
 const a = [20, 10, 4, 80, 50, 1, 33, 44];
 const b = [20, 10, 4, 80, 50, 1, 33, 44, 77];

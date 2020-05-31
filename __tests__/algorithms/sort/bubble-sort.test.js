@@ -1,4 +1,4 @@
-const { bubbleSort } = require('./bubble-sort');
+const { bubbleSort } = require('../../../src/algorithms/sort/bubble-sort');
 
 const a = [20, 10, 4, 80, 50, 1, 33, 44];
 const b = [1, 10, 4, 80, 50, 2, 33, 44, 77];
