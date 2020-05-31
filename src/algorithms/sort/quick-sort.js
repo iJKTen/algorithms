@@ -35,10 +35,10 @@
 
 */
 
-const swap = (arr, itemOne, itemTwo) => {
-  const tempValue = arr[itemOne];
-  arr[itemOne] = arr[itemTwo];
-  arr[itemTwo] = tempValue;
+const swap = (arr, indexOne, indexTwo) => {
+  const tempValue = arr[indexOne];
+  arr[indexOne] = arr[indexTwo];
+  arr[indexTwo] = tempValue;
 };
 
 const findPartitionIndex = (arr, startIndex, endIndex) => {
