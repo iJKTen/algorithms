@@ -33,6 +33,8 @@
   partitionIndex + 1, and endIndex. In other words we are dividing the array logically with the help
   of the partitionIndex.
 
+  We also have a way of getting out of recursion and that happens when startIndex is greater than endIndex.
+
 */
 
 const swap = (arr, indexOne, indexTwo) => {
