@@ -111,21 +111,6 @@ class LinkedList {
   }
 }
 
-const linkedList = new LinkedList();
-linkedList.add(10);
-linkedList.add(20);
-linkedList.add(30);
-linkedList.insertAt(4, 1);
-
-console.log('index Of 4 ', linkedList.indexOf(4));
-
-console.log(JSON.stringify(linkedList));
-
-linkedList.removeFrom(2);
-
-console.log(JSON.stringify(linkedList));
-
-linkedList.remove(4);
-console.log(JSON.stringify(linkedList));
-
-console.log('is empty?', linkedList.isEmpty());
+module.exports = {
+  LinkedList
+};
