@@ -20,6 +20,10 @@ class UnionFind {
       }
     });
   }
+
+  toString() {
+    console.log(this.data);
+  }
 }
 
 module.exports = {
