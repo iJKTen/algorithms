@@ -10,3 +10,7 @@ test('test linked list add', () => {
   expect(JSON.stringify(linkedList)).toMatchSnapshot();
 });
 
+test('test linked list reverse', () => {
+  linkedList.reverse();
+  expect(JSON.stringify(linkedList)).toMatchSnapshot();
+});

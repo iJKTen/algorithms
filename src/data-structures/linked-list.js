@@ -106,6 +106,21 @@ class LinkedList {
     return index;
   }
 
+  reverse() {
+    let current = this.head;
+    let newHead = null;
+
+    // Not checking current.next because we want to take the last node
+    while (current) {
+      const temp = current.next;
+      current.next = newHead;
+      newHead = current;
+      current = temp;
+    }
+
+    this.head = newHead;
+  }
+
   isEmpty() {
     return this.size === 0 ? true : false;
   }
