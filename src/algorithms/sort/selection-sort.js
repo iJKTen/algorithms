@@ -18,21 +18,26 @@ const swap = (a, indexOne, indexTwo) => {
   a[indexTwo] = temp;
 };
 
-const selectionSort = (a) => {
-  for (let index = 0; index < a.length - 1; index++) {
-    let minValueIndex = index;
-    for (let innerIndex = index + 1; innerIndex < a.length; innerIndex++) {
-      if (a[minValueIndex] > a[innerIndex]) {
-        minValueIndex = innerIndex;
-      }
-    }
-
-    if (minValueIndex != index) {
-      swap(a, index, minValueIndex);
+const findMinValue = (arr, currentMinValueIndex, startIndex) => {
+  for (let index = startIndex; index < arr.length; index++) {
+    if (arr[currentMinValueIndex] > arr[index]) {
+      currentMinValueIndex = index;
     }
   }
 
-  return a;
+  return currentMinValueIndex;
+};
+
+const selectionSort = (arr) => {
+  for (let index = 0; index < arr.length; index++) {
+    const minValueIndex = findMinValue(arr, index, index + 1);
+
+    if (minValueIndex != index) {
+      swap(arr, index, minValueIndex);
+    }
+  }
+
+  return arr;
 };
 
 module.exports = {
