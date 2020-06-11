@@ -10,13 +10,21 @@ const swap = (arr, indexOne, indexTwo) => {
 };
 
 const bubbleSort = (arr) => {
-  for (let indexOne = 0; indexOne <= arr.length - 1; indexOne++) {
-    for (let indexTwo = 0; indexTwo <= arr.length - 1; indexTwo++) {
-      if (arr[indexTwo] > arr[indexOne]) {
-        swap(arr, indexOne, indexTwo);
+  let elementsToSort = arr.length;
+  let keepGoing = false;
+
+  do {
+    keepGoing = false;
+
+    for (let index = 0; index < elementsToSort; index++) {
+      if (arr[index] > arr[index + 1]) {
+        swap(arr, index, index + 1);
+        keepGoing = true;
       }
     }
-  }
+
+    elementsToSort--;
+  } while (keepGoing === true);
 };
 
 module.exports = {
