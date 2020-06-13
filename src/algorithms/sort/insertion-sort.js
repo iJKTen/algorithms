@@ -16,7 +16,7 @@ how we find the position in the left side of the array where this element should
 */
 
 const moveInPlace = (arr, index, selectedElement) => {
-  while (index >= 0 && arr[index - 1] > selectedElement) {
+  while (index > 0 && arr[index - 1] > selectedElement) {
     arr[index] = arr[index - 1];
     index--;
   }
