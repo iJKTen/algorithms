@@ -15,21 +15,22 @@ if it is less than its neighbor on the left and we keep doing this until conditi
 how we find the position in the left side of the array where this element should be inserted.
 */
 
-const insertionSort = (a) => {
-  // index represents the logical boundary where left array is sorted & right array is unsorted.
-  for (let index = 1; index < a.length; index++) {
-    const elementToSwap = a[index];
-    let previousIndex = index;
+const moveInPlace = (arr, index, selectedElement) => {
+  while (index >= 0 && arr[index - 1] > selectedElement) {
+    arr[index] = arr[index - 1];
+    index--;
+  }
+  arr[index] = selectedElement;
+};
 
-    // Figure out where to place elementToSwap.
-    while (previousIndex >= 0 && a[previousIndex - 1] > elementToSwap) {
-      a[previousIndex] = a[previousIndex - 1];
-      previousIndex--;
-    }
-    a[previousIndex] = elementToSwap;
+const insertionSort = (arr) => {
+  for (let index = 1; index < arr.length; index++) {
+    const selectedElement = arr[index];
+
+    moveInPlace(arr, index, selectedElement);
   }
 
-  return a;
+  return arr;
 };
 
 module.exports = {
