@@ -43,8 +43,7 @@ const swap = (arr, indexOne, indexTwo) => {
   arr[indexTwo] = tempValue;
 };
 
-const sortAndFindPartitionIndex = (arr, startIndex, endIndex) => {
-  const pivot = arr[endIndex];
+const sort = (arr, pivot, startIndex, endIndex) => {
   let partitionIndex = startIndex;
 
   for (let index = startIndex; index < endIndex; index++) {
@@ -54,13 +53,19 @@ const sortAndFindPartitionIndex = (arr, startIndex, endIndex) => {
     }
   }
 
+  return partitionIndex;
+};
+
+const findPartitionIndex = (arr, startIndex, endIndex) => {
+  const pivot = arr[endIndex];
+  const partitionIndex = sort(arr, pivot, startIndex, endIndex);
   swap(arr, partitionIndex, endIndex);
   return partitionIndex;
 };
 
 const quickSort = (arr, startIndex, endIndex) => {
   if (startIndex < endIndex) {
-    const partitionIndex = sortAndFindPartitionIndex(arr, startIndex, endIndex);
+    const partitionIndex = findPartitionIndex(arr, startIndex, endIndex);
     quickSort(arr, startIndex, partitionIndex - 1);
     quickSort(arr, partitionIndex + 1, endIndex);
   }
