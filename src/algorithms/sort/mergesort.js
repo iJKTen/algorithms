@@ -49,7 +49,7 @@ const merge = (a, beginIndex, endIndex, length) => {
     rightIndex++;
   }
 
-  // Update the original array
+  // Update the original array from the temporary array.
   for (let index = beginIndex; index <= length; index++) {
     a[index] = tempArr[index - beginIndex];
   }
