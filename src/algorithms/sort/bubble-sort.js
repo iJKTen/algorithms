@@ -3,29 +3,23 @@
   DO NOT USE THIS.
 */
 
-const swap = (arr, indexOne, indexTwo) => {
-  const tempValue = arr[indexOne];
-  arr[indexOne] = arr[indexTwo];
-  arr[indexTwo] = tempValue;
-};
+// const bubbleSort = (arr) => {
+//   let elementsToSort = arr.length;
+//   let keepGoing = false;
 
-const bubbleSort = (arr) => {
-  let elementsToSort = arr.length;
-  let keepGoing = false;
+//   do {
+//     keepGoing = false;
 
-  do {
-    keepGoing = false;
+//     for (let index = 0; index < elementsToSort; index++) {
+//       if (arr[index] > arr[index + 1]) {
+//         swap(arr, index, index + 1);
+//         keepGoing = true;
+//       }
+//     }
 
-    for (let index = 0; index < elementsToSort; index++) {
-      if (arr[index] > arr[index + 1]) {
-        swap(arr, index, index + 1);
-        keepGoing = true;
-      }
-    }
-
-    elementsToSort--;
-  } while (keepGoing === true);
-};
+//     elementsToSort--;
+//   } while (keepGoing === true);
+// };
 
 // const bubbleSort = (arr) => {
 //   for (let index = 0; index < arr.length; index++) {
@@ -36,6 +30,28 @@ const bubbleSort = (arr) => {
 //     }
 //   }
 // };
+
+const swap = (arr, index1, index2) => {
+  const temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
+};
+
+const bubbleSort = (arr) => {
+  let length = arr.length;
+  while (length > 0) {
+    let index = 0;
+
+    for (let nextIndex = index + 1; nextIndex < length; nextIndex++) {
+      if (arr[index] > arr[nextIndex]) {
+        swap(arr, index, nextIndex);
+      }
+      index++;
+    }
+
+    length--;
+  }
+};
 
 module.exports = {
   bubbleSort

@@ -21,15 +21,6 @@ const findPositionToAdd = (node, value) => {
   return nodeFound;
 };
 
-// Also known as preorder traversal
-const dfs = (node) => {
-  if (node) {
-    console.log(node.data);
-    dfs(node.left);
-    dfs(node.right);
-  }
-};
-
 const bfs = (node) => {
   const stack = [node.root];
   console.log(node.root.data);
@@ -44,6 +35,18 @@ const bfs = (node) => {
   }
 };
 
+/* Root, Left, Right
+Also known as preorder traversal
+*/
+const dfs = (node) => {
+  if (node) {
+    console.log(node.data);
+    dfs(node.left);
+    dfs(node.right);
+  }
+};
+
+/* Left, Root, Right */
 const inOrderTraversal = (node) => {
   if (node !== undefined || node !== null) {
     if (node.left) {
@@ -56,6 +59,7 @@ const inOrderTraversal = (node) => {
   }
 };
 
+/* Left, Right, Root */
 const postOrderTraversal = (node) => {
   if (node !== undefined || node !== null) {
     if (node.left) {
