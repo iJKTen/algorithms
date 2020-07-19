@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test linked list add 1`] = `"{\\"head\\":{\\"data\\":10,\\"next\\":{\\"data\\":20,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":40,\\"next\\":null}}}},\\"size\\":4}"`;
+exports[`add new 80 1`] = `"{\\"head\\":{\\"data\\":40,\\"next\\":{\\"data\\":35,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":22,\\"next\\":{\\"data\\":20,\\"next\\":{\\"data\\":80,\\"next\\":null}}}}}},\\"size\\":6}"`;
 
-exports[`test linked list reverse 1`] = `"{\\"head\\":{\\"data\\":40,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":20,\\"next\\":{\\"data\\":10,\\"next\\":null}}}},\\"size\\":4}"`;
+exports[`insert at index 3 1`] = `"{\\"head\\":{\\"data\\":40,\\"next\\":{\\"data\\":35,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":22,\\"next\\":{\\"data\\":20,\\"next\\":null}}}}},\\"size\\":5}"`;
+
+exports[`remove 10 1`] = `"{\\"head\\":{\\"data\\":40,\\"next\\":{\\"data\\":35,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":20,\\"next\\":null}}}},\\"size\\":4}"`;
+
+exports[`removed from index 3 1`] = `"{\\"head\\":{\\"data\\":40,\\"next\\":{\\"data\\":35,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":20,\\"next\\":{\\"data\\":80,\\"next\\":null}}}}},\\"size\\":5}"`;
+
+exports[`test linked list add 1`] = `"{\\"head\\":{\\"data\\":10,\\"next\\":{\\"data\\":20,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":35,\\"next\\":{\\"data\\":40,\\"next\\":null}}}}},\\"size\\":5}"`;
+
+exports[`test linked list reverse 1`] = `"{\\"head\\":{\\"data\\":40,\\"next\\":{\\"data\\":35,\\"next\\":{\\"data\\":30,\\"next\\":{\\"data\\":20,\\"next\\":{\\"data\\":10,\\"next\\":null}}}}},\\"size\\":5}"`;

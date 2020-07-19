@@ -12,6 +12,38 @@ class LinkedList {
     this.size = 0;
   }
 
+  sortedAdd(element) {
+    const node = new Node(element);
+
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      if (this.head.data > element) {
+        const temp = this.head;
+        this.head = node;
+        node.next = temp;
+      } else {
+        let current = this.head;
+        let previous;
+        let index = 0;
+
+        while (index < this.size) {
+          if (current.data > element) {
+            node.next = current;
+            previous.next = node;
+            break;
+          } else {
+            previous = current;
+            current = current.next;
+          }
+          index++;
+        }
+      }
+    }
+
+    this.size++;
+  }
+
   add(element) {
     const node = new Node(element);
 

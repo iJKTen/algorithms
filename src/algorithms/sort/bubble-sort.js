@@ -39,12 +39,16 @@ const swap = (arr, index1, index2) => {
 
 const bubbleSort = (arr) => {
   let length = arr.length;
-  while (length > 0) {
+  let swappedAtLeastOnce = true;
+
+  while (length > 0 && swappedAtLeastOnce) {
     let index = 0;
+    swappedAtLeastOnce = false;
 
     for (let nextIndex = index + 1; nextIndex < length; nextIndex++) {
       if (arr[index] > arr[nextIndex]) {
         swap(arr, index, nextIndex);
+        swappedAtLeastOnce = true;
       }
       index++;
     }
