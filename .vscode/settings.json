@@ -1,0 +1,6 @@
+{
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "javascript.format.enable": false
+}

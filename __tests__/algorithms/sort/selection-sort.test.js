@@ -1,10 +1,10 @@
-const { selectionSort } = require('../../../src/algorithms/sort/selection-sort');
+const {selectionSort} = require('../../../src/algorithms/sort/selection-sort');
 
-const a = [20, 10, 4, 80, 50, 1, 33, 44];
+const a = [64, 25, 12, 22, 11];
 const b = [1, 10, 4, 80, 50, 2, 33, 44, 77];
 
 test('selection sort', () => {
-  expect(selectionSort(a)).toEqual([1, 4, 10, 20, 33, 44, 50, 80]);
+  expect(selectionSort(a)).toEqual([11, 12, 22, 25, 64]);
 });
 
 test('selection sort test', () => {

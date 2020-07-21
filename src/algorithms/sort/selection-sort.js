@@ -19,7 +19,7 @@ const swap = (a, indexOne, indexTwo) => {
 };
 
 const findMinValue = (arr, currentMinValueIndex, startIndex) => {
-  for (let index = startIndex; index < arr.length; index++) {
+  for (let index = startIndex; index < arr.length;index++) {
     if (arr[currentMinValueIndex] > arr[index]) {
       currentMinValueIndex = index;
     }
@@ -39,6 +39,7 @@ const selectionSort = (arr) => {
 
   return arr;
 };
+
 
 module.exports = {
   selectionSort
