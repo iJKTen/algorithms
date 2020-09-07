@@ -16,10 +16,10 @@ Graph.prototype.bfs = function(node) {
   const queue = [node];
 
   while (queue.length > 0) {
-    const vertex = queue.pop();
-    console.log(vertex);
+    const tempNode = queue.shift();
+    console.log(tempNode);
 
-    const neighbours = this.adjacencyList[vertex];
+    const neighbours = this.adjacencyList[tempNode];
 
     if (neighbours !== undefined) {
       neighbours.forEach((element) => {
