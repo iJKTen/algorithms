@@ -119,6 +119,21 @@ const sumOfNodes = (node, sum) => {
   return results;
 };
 
+const height = (node) => {
+  if (!node) {
+    return 0;
+  }
+
+  const leftHeight = height(node.left);
+  const rightHeight = height(node.right);
+
+  if (leftHeight > rightHeight) {
+    return leftHeight + 1;
+  }
+
+  return rightHeight + 1;
+};
+
 class Node {
   constructor(data) {
     this.data = data;
@@ -131,7 +146,32 @@ class BinaryTree {
   constructor() {
     this.root = null;
     this.size = 0;
-    this.left = null;
+  }
+
+  createFromPreOrderTraversal(arr) {
+    const nodes = [];
+    arr.forEach((n) => {
+      this.size++;
+      const node = new Node(n);
+      if (this.root === null) {
+        this.root = node;
+        nodes.push(this.root);
+      } else {
+        let tempNode = null;
+        while (nodes.length > 0 && n > nodes[nodes.length - 1].data) {
+          tempNode = nodes.pop();
+        }
+
+        if (tempNode !== null) {
+          tempNode.right = new Node(n);
+          nodes.push(tempNode.right);
+        } else {
+          const node = new Node(n);
+          nodes[nodes.length - 1].left = node;
+          nodes.push(nodes[nodes.length - 1].left);
+        }
+      }
+    });
   }
 
   add(element) {
@@ -160,6 +200,12 @@ class BinaryTree {
         console.log(`${current.left.data} ${current.right.data}`);
         stack.unshift(current.right);
         stack.unshift(current.left);
+      } else if ((current.left === undefined || current.left === null) && current.right) {
+        console.log(`no left ${current.right.data}`);
+        stack.unshift(current.right);
+      } else if ((current.right === undefined || current.right === null) && current.left) {
+        console.log(`${current.left.data} no right`);
+        stack.unshift(current.left);
       }
     }
   }
@@ -186,22 +232,27 @@ class BinaryTree {
 // };
 
 const tree = new BinaryTree();
-tree.add(25);
+// tree.add(25);
+// console.log(JSON.stringify(tree));
+// tree.add(10);
+// console.log(JSON.stringify(tree));
+// tree.add(30);
+// console.log(JSON.stringify(tree));
+// tree.add(5);
+// console.log(JSON.stringify(tree));
+// tree.add(11);
+// console.log(JSON.stringify(tree));
+// tree.add(35);
+// console.log(JSON.stringify(tree));
+// tree.add(28);
+// console.log(JSON.stringify(tree));
+// console.log(isBST(tree));
+// console.log(tree.traverseLevelPerLine());
+// console.log(bfs(tree));
+// console.log(tree.traverseInPreOrder());
+// console.log(tree.sumNode());
+
+tree.createFromPreOrderTraversal([10, 5, 1, 7, 20, 30, 40, 50, 45]);
 console.log(JSON.stringify(tree));
-tree.add(10);
-console.log(JSON.stringify(tree));
-tree.add(30);
-console.log(JSON.stringify(tree));
-tree.add(5);
-console.log(JSON.stringify(tree));
-tree.add(11);
-console.log(JSON.stringify(tree));
-tree.add(35);
-console.log(JSON.stringify(tree));
-tree.add(28);
-console.log(JSON.stringify(tree));
-console.log(isBST(tree));
 console.log(tree.traverseLevelPerLine());
 console.log(bfs(tree));
-console.log(tree.traverseInPreOrder());
-console.log(tree.sumNode());
