@@ -148,3 +148,8 @@ MaxHeap.prototype.remove = function() {
     }
   }
 };
+
+module.exports = {
+  MinHeap,
+  MaxHeap
+};

@@ -60,6 +60,10 @@ Graph.prototype.print = function() {
   console.log(this.adjacencyList);
 };
 
+module.exports = {
+  Graph
+}
+
 const obj = new Graph();
 obj.addEdge('A', 'B');
 obj.addEdge('A', 'D');
