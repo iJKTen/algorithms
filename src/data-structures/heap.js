@@ -85,17 +85,17 @@ MinHeap.prototype.add = function(element) {
 MinHeap.prototype.remove = function() {
   this.swap(0, this.arr.length - 1);
   this.arr.pop();
-  let elementAt = 0;
+  let elementAtIndex = 0;
   let isHeap = false;
 
   while (!isHeap && this.arr.length > 1) {
-    const leftIndex = this.left(elementAt);
-    const rightIndex = this.right(elementAt);
+    const leftIndex = this.left(elementAtIndex);
+    const rightIndex = this.right(elementAtIndex);
     const index = (this.arr[leftIndex] < this.arr[rightIndex]) ? leftIndex : rightIndex;
 
-    if (this.arr[index] < this.arr[elementAt]) {
-      this.swap(index, elementAt);
-      elementAt = index;
+    if (this.arr[index] < this.arr[elementAtIndex]) {
+      this.swap(index, elementAtIndex);
+      elementAtIndex = index;
     } else {
       isHeap = false;
     }
@@ -132,17 +132,17 @@ MaxHeap.prototype.add = function(element) {
 MaxHeap.prototype.remove = function() {
   this.swap(0, this.arr.length - 1);
   this.arr.pop();
-  let elementAt = 0;
+  let elementAtIndex = 0;
   let isHeap = false;
 
   while (!isHeap && this.arr.length > 1) {
-    const leftIndex = this.left(elementAt);
-    const rightIndex = this.right(elementAt);
+    const leftIndex = this.left(elementAtIndex);
+    const rightIndex = this.right(elementAtIndex);
     const index = (this.arr[leftIndex] > this.arr[rightIndex]) ? leftIndex : rightIndex;
 
-    if (this.arr[index] > this.arr[elementAt]) {
-      this.swap(index, elementAt);
-      elementAt = index;
+    if (this.arr[index] > this.arr[elementAtIndex]) {
+      this.swap(index, elementAtIndex);
+      elementAtIndex = index;
     } else {
       isHeap = false;
     }
