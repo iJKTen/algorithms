@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`heapify 10,20,15,12,40,25,18 1`] = `
+Array [
+  40,
+  20,
+  25,
+  12,
+  10,
+  15,
+  18,
+]
+`;
+
+exports[`max heap 1`] = `
+Array [
+  50,
+  30,
+  20,
+  15,
+  10,
+  8,
+  16,
+]
+`;
+
+exports[`max heap add 60 1`] = `
+Array [
+  60,
+  50,
+  20,
+  30,
+  10,
+  8,
+  16,
+  15,
+]
+`;
+
+exports[`min heap 1`] = `
+Array [
+  10,
+  25,
+  20,
+  40,
+  32,
+  35,
+  30,
+]
+`;
+
+exports[`min heap add 8 1`] = `
+Array [
+  8,
+  10,
+  20,
+  25,
+  32,
+  35,
+  30,
+  40,
+]
+`;
+
+exports[`min heap remove 1`] = `
+Array [
+  10,
+  25,
+  20,
+  40,
+  32,
+  35,
+  30,
+]
+`;
+
+exports[`remove 60 from max heap 1`] = `
+Array [
+  50,
+  30,
+  20,
+  15,
+  10,
+  8,
+  16,
+]
+`;

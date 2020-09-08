@@ -2,8 +2,8 @@ const Heap = function() {
   this.arr = [];
 };
 
-Heap.prototype.printArray = function() {
-  console.log(this.arr);
+Heap.prototype.dataSource = function() {
+  return this.arr;
 };
 
 Heap.prototype.left = function(index) {
@@ -66,18 +66,13 @@ MinHeap.prototype.add = function(element) {
   this.arr.push(element);
 
   if (this.arr.length > 1) {
-    let isHeap = false;
     let elementAtIndex = this.arr.length - 1;
+    let parentIndex = this.parent(elementAtIndex);
 
-    while (!isHeap) {
-      const parentIndex = this.parent(elementAtIndex);
-      const parent = this.arr[parentIndex];
-      if (parent > element) {
-        this.swap(parentIndex, elementAtIndex);
-        elementAtIndex = parentIndex;
-      } else {
-        isHeap = true;
-      }
+    while (this.arr[parentIndex] > element) {
+      this.swap(parentIndex, elementAtIndex);
+      elementAtIndex = parentIndex;
+      parentIndex = this.parent(parentIndex);
     }
   }
 };
@@ -97,7 +92,7 @@ MinHeap.prototype.remove = function() {
       this.swap(index, elementAtIndex);
       elementAtIndex = index;
     } else {
-      isHeap = false;
+      isHeap = true;
     }
   }
 };
@@ -113,18 +108,13 @@ MaxHeap.prototype.add = function(element) {
   this.arr.push(element);
 
   if (this.arr.length > 1) {
-    let isHeap = false;
     let elementAtIndex = this.arr.length - 1;
+    let parentIndex = this.parent(elementAtIndex);
 
-    while (!isHeap) {
-      const parentIndex = this.parent(elementAtIndex);
-      const parent = this.arr[parentIndex];
-      if (parent < element) {
-        this.swap(parentIndex, elementAtIndex);
-        elementAtIndex = parentIndex;
-      } else {
-        isHeap = true;
-      }
+    while (this.arr[parentIndex] < element) {
+      this.swap(parentIndex, elementAtIndex);
+      elementAtIndex = parentIndex;
+      parentIndex = this.parent(parentIndex);
     }
   }
 };
@@ -144,12 +134,13 @@ MaxHeap.prototype.remove = function() {
       this.swap(index, elementAtIndex);
       elementAtIndex = index;
     } else {
-      isHeap = false;
+      isHeap = true;
     }
   }
 };
 
 module.exports = {
+  Heap,
   MinHeap,
   MaxHeap
 };
