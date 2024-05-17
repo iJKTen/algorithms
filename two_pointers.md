@@ -41,7 +41,7 @@ Skip any characters that are not alpha numeric. Do not forget to increment/decre
 Return false if the lower case character at the left pointer is not equal to the 
 lower case character at the right pointer.
 
-💡 [Python Solution](palindrome.py)<br/>
+💡 [Python Solution](src/python/palindrome.py)<br/>
 💡 [JavaScript Solution](palindrome.js) 
 
 
