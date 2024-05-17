@@ -42,7 +42,7 @@ Return false if the lower case character at the left pointer is not equal to the
 lower case character at the right pointer.
 
 💡 [Python Solution](src/python/palindrome.py)<br/>
-💡 [JavaScript Solution](palindrome.js) 
+💡 [JavaScript Solution](src/javascript/palindrome.js) 
 
 
 ## <span style="color: pink">680. Valid Palindrome 2</span> [🔗](https://leetcode.com/problems/valid-palindrome-ii/description/)
