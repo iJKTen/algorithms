@@ -72,6 +72,10 @@ decrementing the right pointer by one and check if the string is a
 palindrome or not.
 
 
+💡 [Python Solution](src/python/palindrome2.py)
+💡 [JavaScript Solution](src/javascript/palindrome2.js)
+
+
 ## <span style="color: pink">15. 3Sum</span> [🔗](https://leetcode.com/problems/3sum/description/)
 Given an integer array nums, return all the triplets 
 [nums[i], nums[j], nums[k]] such that 
@@ -136,6 +140,10 @@ nums[right] != nums[right - 1] 2 != 0<br/>
 nums = [-2, 0, 0, 2, 2], i = 0, left = 2, right = 2<br/>
 
 
+💡 [Python Solution](src/python/3sum.py)
+💡 [JavaScript Solution](src/javascript/3sum.js)
+
+
 ## <span style="color: pink">Sum of Three Values</span> [🔗](https://www.educative.io/courses/grokking-coding-interview-patterns-python/sum-of-three-values)
 Given an array of integers, nums, and an integer value, target, 
 determine if there are any three integers in nums whose sum is equal to 
@@ -155,8 +163,12 @@ right at the last element of the array.
 
 As long as the two pointers do not exceed each other, calculate the sum of
 the triplets (number at index + number at left + number at right). If this
-sum is less than the sum then we increment the left pointer by one, else, 
+sum is less than the target then we increment the left pointer by one, else, 
 decrement the right pointer by one. If they are equal then return true.
+
+
+💡 [Python Solution](src/python/sum_of_three_values.py)
+💡 [JavaScript Solution](src/javascript/sum_of_three_values.js)
 
 
 ## <span style="color: pink">75. Sort Colors</span> [🔗](https://leetcode.com/problems/sort-colors/description/)
@@ -216,6 +228,10 @@ arr = [0, 1, 2, 1, 2, 2], red = 1, white = 2, blue = 5<br/>
 arr = [0, 1, 2, 1, 2, 2], red = 1, white = 2, blue = 4(we did swap but its the same number)<br/>
 arr = [0, 1, 2, 1, 2, 2], red = 1, white = 2, blue = 3<br/>
 arr = [0, 1, 1, 2, 2, 2], red = 1, white = 2, blue = 2<br/>
+
+
+💡 [Python Solution](src/python/sort_colors.py)
+💡 [JavaScript Solution](src/javascript/sort_colors.js)
 
 
 ## <span style="color: pink">Reverse Words in a String</span> [🔗](https://www.educative.io/courses/grokking-coding-interview-patterns-python/reverse-words-in-a-string)
