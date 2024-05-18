@@ -72,7 +72,7 @@ decrementing the right pointer by one and check if the string is a
 palindrome or not.
 
 
-💡 [Python Solution](src/python/palindrome2.py)
+💡 [Python Solution](src/python/palindrome2.py)<br />
 💡 [JavaScript Solution](src/javascript/palindrome2.js)
 
 
@@ -140,7 +140,7 @@ nums[right] != nums[right - 1] 2 != 0<br/>
 nums = [-2, 0, 0, 2, 2], i = 0, left = 2, right = 2<br/>
 
 
-💡 [Python Solution](src/python/3sum.py)
+💡 [Python Solution](src/python/3sum.py)<br />
 💡 [JavaScript Solution](src/javascript/3sum.js)
 
 
@@ -167,7 +167,7 @@ sum is less than the target then we increment the left pointer by one, else,
 decrement the right pointer by one. If they are equal then return true.
 
 
-💡 [Python Solution](src/python/sum_of_three_values.py)
+💡 [Python Solution](src/python/sum_of_three_values.py)<br/>
 💡 [JavaScript Solution](src/javascript/sum_of_three_values.js)
 
 
@@ -230,7 +230,7 @@ arr = [0, 1, 2, 1, 2, 2], red = 1, white = 2, blue = 3<br/>
 arr = [0, 1, 1, 2, 2, 2], red = 1, white = 2, blue = 2<br/>
 
 
-💡 [Python Solution](src/python/sort_colors.py)
+💡 [Python Solution](src/python/sort_colors.py)<br />
 💡 [JavaScript Solution](src/javascript/sort_colors.js)
 
 
@@ -260,6 +260,10 @@ length of the string. Run a while loop to move the right pointer, where
 right pointer is less than the length of the string and character at right
 pointer is not a Space, now reverse the characters from left till right - 1. 
 Move the left pointer to be at right + 1 and right + 1.
+
+
+💡 [Python Solution](src/python/reverse_words_in_a_string.py)<br />
+💡 [JavaScript Solution](src/javaScript/reverse_words_in_a_string.js)
 
 
 ## <span style="color: pink">Remove nth Node from End of the list</span> [🔗](https://www.educative.io/courses/grokking-coding-interview-patterns-python/remove-nth-node-from-end-of-list)
@@ -298,6 +302,10 @@ Example 2:
 [69, 98, 49, 1, 4, 6], left = 69, right = 69<br/>
 move right pointer by 6 places<br/>
 [69, 98, 49, 1, 4, 6], left = 69, right = null<br/>
+
+
+💡 [Python Solution](src/python/remove_nth_last_node.py)<br />
+💡 [JavaScript Solution](src/javaScript/remove_nth_last_node.js)
 
 ## Notes
 
